@@ -107,7 +107,7 @@ export default function Home() {
   </div>
 
   {/* Overlay for darkening the image on desktop */}
-  <div className="hidden md:block absolute inset-0 bg-black opacity-50"></div>
+  <div className="hidden md:block absolute inset-0 bg-black opacity-10"></div>
 
   {/* Content with Responsive Positioning and Animations */}
   <div className="relative z-10 max-w-lg text-center md:text-right flex flex-col items-center justify-center h-full md:items-end md:justify-center">
