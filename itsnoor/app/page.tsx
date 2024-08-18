@@ -18,15 +18,27 @@ export default function Home() {
         <div className="max-w-7xl mx-auto flex justify-between items-center px-6">
           <h1 className="text-2xl font-bold text-white">Noor's Portfolio</h1>
           <div className="hidden md:flex space-x-6">
-            <a href="#projects" className="hover:text-gray-400 transition-colors text-white">
+            <motion.a
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5}}
+             href="#projects" className="hover:text-gray-400 transition-colors text-white">
               Projects
-            </a>
-            <a href="#about" className="hover:text-gray-400 transition-colors text-white">
+            </motion.a>
+            <motion.a
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+             href="#about" className="hover:text-gray-400 transition-colors text-white">
               About
-            </a>
-            <a href="#contact" className="hover:text-gray-400 transition-colors text-white">
+            </motion.a>
+            <motion.a 
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            href="#contact" className="hover:text-gray-400 transition-colors text-white">
               Contact
-            </a>
+            </motion.a>
           </div>
           {/* Hamburger Icon */}
           <div className="md:hidden">
@@ -53,33 +65,43 @@ export default function Home() {
         </div>
 
         {/* Mobile Menu */}
-        {isOpen && (
-          <div className="md:hidden bg-transparent text-white px-6 pt-4 pb-2 animate-fade-in-down">
-            <div className="flex flex-col items-center justify-center text-center space-y-2">
-              <a
-                href="#projects"
-                className="block py-2 hover:text-gray-400 transition-colors"
-                onClick={toggleMenu}
-              >
-                Projects
-              </a>
-              <a
-                href="#about"
-                className="block py-2 hover:text-gray-400 transition-colors"
-                onClick={toggleMenu}
-              >
-                About
-              </a>
-              <a
-                href="#contact"
-                className="block py-2 hover:text-gray-400 transition-colors"
-                onClick={toggleMenu}
-              >
-                Contact
-              </a>
-            </div>
-          </div>
-        )}
+{isOpen && (
+  <div className="md:hidden bg-transparent text-white px-6 pt-4 pb-2 animate-fade-in-down">
+    <div className="flex flex-col items-center justify-center text-center space-y-2">
+      <motion.a
+        initial={{ opacity: 0, x: -50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.5, delay: 0.1 }} // Slight delay for first item
+        href="#projects"
+        className="block py-2 hover:text-gray-400 transition-colors"
+        onClick={toggleMenu}
+      >
+        Projects
+      </motion.a>
+      <motion.a
+        initial={{ opacity: 0, x: -50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.5, delay: 0.2 }} // Increased delay for second item
+        href="#about"
+        className="block py-2 hover:text-gray-400 transition-colors"
+        onClick={toggleMenu}
+      >
+        About
+      </motion.a>
+      <motion.a
+        initial={{ opacity: 0, x: -50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.5, delay: 0.3 }} // Further increased delay for third item
+        href="#contact"
+        className="block py-2 hover:text-gray-400 transition-colors"
+        onClick={toggleMenu}
+      >
+        Contact
+      </motion.a>
+    </div>
+  </div>
+)}
+
       </nav>
 
       {/* Hero Section with Background Image or Video */}
