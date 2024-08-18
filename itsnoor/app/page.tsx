@@ -1,49 +1,98 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
 export default function Home() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false); // Define isOpen state for mobile menu
+  const [displayText, setDisplayText] = useState("");
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [loopNum, setLoopNum] = useState(0);
+  const [typingSpeed, setTypingSpeed] = useState(150);
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
+  const text = "Noor's Portfolio"; // Your title text
+  const blink = "_";
+
+  // Typewriter effect logic
+  useEffect(() => {
+    const handleType = () => {
+      const currentIndex = displayText.length;
+  
+      if (!isDeleting && currentIndex < text.length) {
+        // Typing logic
+        setDisplayText(text.substring(0, currentIndex + 1));
+      } else if (isDeleting && currentIndex > 0) {
+        // Deleting logic
+        setDisplayText(text.substring(0, currentIndex - 1));
+      }
+  
+      if (!isDeleting && currentIndex === text.length) {
+        // Pause before starting to delete
+        setTimeout(() => setIsDeleting(true), 1000);
+      } else if (isDeleting && currentIndex === 0) {
+        // Reset after deleting
+        setIsDeleting(false);
+        setLoopNum(loopNum + 1);
+      }
+  
+      const speed = isDeleting ? 50 : 150; // Faster speed when deleting
+      setTypingSpeed(speed);
+    };
+  
+    const timeout = setTimeout(handleType, typingSpeed);
+    return () => clearTimeout(timeout);
+  }, [displayText, isDeleting, loopNum, typingSpeed]);
+  
 
   return (
     <main className="relative min-h-screen bg-black text-white font-sans">
       {/* Navbar */}
       <nav className="w-full py-4 bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg border-b border-white border-opacity-20 fixed top-0 left-0 z-50">
         <div className="max-w-7xl mx-auto flex justify-between items-center px-6">
-          <h1 className="text-2xl font-bold text-white">Noor's Portfolio</h1>
+          {/* Typewriter Effect Title */}
+          <motion.h1
+            className="text-2xl font-bold text-white"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+          >
+            {displayText}
+            <span className="text-white animate-blink">{blink}</span>
+          </motion.h1>
           <div className="hidden md:flex space-x-6">
             <motion.a
-            initial={{ opacity: 0, y: -50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5}}
-             href="#projects" className="hover:text-gray-400 transition-colors text-white">
+              initial={{ opacity: 0, y: -50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              href="#projects"
+              className="hover:text-gray-400 transition-colors text-white"
+            >
               Projects
             </motion.a>
             <motion.a
-            initial={{ opacity: 0, y: -50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-             href="#about" className="hover:text-gray-400 transition-colors text-white">
+              initial={{ opacity: 0, y: -50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              href="#about"
+              className="hover:text-gray-400 transition-colors text-white"
+            >
               About
             </motion.a>
-            <motion.a 
-            initial={{ opacity: 0, y: -50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            href="#contact" className="hover:text-gray-400 transition-colors text-white">
+            <motion.a
+              initial={{ opacity: 0, y: -50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              href="#contact"
+              className="hover:text-gray-400 transition-colors text-white"
+            >
               Contact
             </motion.a>
           </div>
           {/* Hamburger Icon */}
           <div className="md:hidden">
             <button
-              onClick={toggleMenu}
+              onClick={() => setIsOpen(!isOpen)} // Toggle isOpen state on click
               className="text-white focus:outline-none"
             >
               <svg
@@ -65,116 +114,112 @@ export default function Home() {
         </div>
 
         {/* Mobile Menu */}
-{isOpen && (
-  <div className="md:hidden bg-transparent text-white px-6 pt-4 pb-2 animate-fade-in-down">
-    <div className="flex flex-col items-center justify-center text-center space-y-2">
-      <motion.a
-        initial={{ opacity: 0, x: -50 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.5, delay: 0.1 }} // Slight delay for first item
-        href="#projects"
-        className="block py-2 hover:text-gray-400 transition-colors"
-        onClick={toggleMenu}
-      >
-        Projects
-      </motion.a>
-      <motion.a
-        initial={{ opacity: 0, x: -50 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.5, delay: 0.2 }} // Increased delay for second item
-        href="#about"
-        className="block py-2 hover:text-gray-400 transition-colors"
-        onClick={toggleMenu}
-      >
-        About
-      </motion.a>
-      <motion.a
-        initial={{ opacity: 0, x: -50 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.5, delay: 0.3 }} // Further increased delay for third item
-        href="#contact"
-        className="block py-2 hover:text-gray-400 transition-colors"
-        onClick={toggleMenu}
-      >
-        Contact
-      </motion.a>
-    </div>
-  </div>
-)}
-
+        {isOpen && (
+          <div className="md:hidden bg-transparent text-white px-6 pt-4 pb-2 animate-fade-in-down">
+            <div className="flex flex-col items-center justify-center text-center space-y-2">
+              <motion.a
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }} // Slight delay for first item
+                href="#projects"
+                className="block py-2 hover:text-gray-400 transition-colors"
+                onClick={() => setIsOpen(false)}
+              >
+                Projects
+              </motion.a>
+              <motion.a
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }} // Increased delay for second item
+                href="#about"
+                className="block py-2 hover:text-gray-400 transition-colors"
+                onClick={() => setIsOpen(false)}
+              >
+                About
+              </motion.a>
+              <motion.a
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }} // Further increased delay for third item
+                href="#contact"
+                className="block py-2 hover:text-gray-400 transition-colors"
+                onClick={() => setIsOpen(false)}
+              >
+                Contact
+              </motion.a>
+            </div>
+          </div>
+        )}
       </nav>
 
       {/* Hero Section with Background Image or Video */}
-<section className="relative flex items-center justify-center md:justify-end h-screen px-8 md:px-24">
-  {/* Background Image for Desktop */}
-  <div
-    className="hidden md:block absolute inset-0 bg-cover bg-left"
-    style={{ backgroundImage: "url('/bgNoor.jpg')" }}
-  ></div>
+      <section className="relative flex items-center justify-center md:justify-end h-screen px-8 md:px-24">
+        {/* Background Image for Desktop */}
+        <div
+          className="hidden md:block absolute inset-0 bg-cover bg-left"
+          style={{ backgroundImage: "url('/bgNoor.jpg')" }}
+        ></div>
 
-  {/* Background Video for Mobile */}
-  <div className="block md:hidden absolute inset-0">
-    <video
-      className="w-full h-full object-cover"
-      autoPlay
-      muted
-      loop
-      playsInline
-    >
-      <source src="/bgmb.mp4" type="video/mp4" />
-      Your browser does not support the video tag.
-    </video>
-    {/* Black Overlay for Video */}
-    <div className="absolute inset-0 bg-black opacity-50"></div>
-  </div>
+        {/* Background Video for Mobile */}
+        <div className="block md:hidden absolute inset-0">
+          <video
+            className="w-full h-full object-cover"
+            autoPlay
+            muted
+            loop
+            playsInline
+          >
+            <source src="/bgmb.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          {/* Black Overlay for Video */}
+          <div className="absolute inset-0 bg-black opacity-50"></div>
+        </div>
 
-  {/* Overlay for darkening the image on desktop */}
-  <div className="hidden md:block absolute inset-0 bg-black opacity-10"></div>
+        {/* Overlay for darkening the image on desktop */}
+        <div className="hidden md:block absolute inset-0 bg-black opacity-10"></div>
 
-  {/* Content with Responsive Positioning and Animations */}
-  <div className="relative z-10 max-w-lg text-center md:text-right flex flex-col items-center justify-center h-full md:items-end md:justify-center">
-    <motion.h1
-      initial={{ opacity: 0, y: -50 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1 }}
-      className="text-4xl md:text-5xl font-extrabold mb-4 md:mb-6"
-    >
-      Welcome to My Creative Space
-    </motion.h1>
-    <motion.p
-      initial={{ opacity: 0, y: -50 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1 }}
-      className="text-lg md:text-xl text-white mb-6 md:mb-8"
-    >
-      Hi, I'm Noor. I design and develop web experiences that are visually
-      appealing and highly functional.
-    </motion.p>
-    <div className="flex flex-col space-y-4 md:space-y-0 md:flex-row md:space-x-4">
-      <motion.a
-        href="#projects"
-        className="inline-block px-8 py-3 bg-white text-black font-semibold rounded-lg hover:bg-gray-200 transition-transform transform hover:scale-105"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.5 }}
-      >
-        Explore My Work
-      </motion.a>
-      <motion.a
-        href="#contact"
-        className="inline-block px-8 py-3 border-2 border-white rounded-lg hover:bg-gray-800 transition-transform transform hover:scale-105"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.7 }}
-      >
-        Get in Touch
-      </motion.a>
-    </div>
-  </div>
-</section>
-
-
-
+        {/* Content with Responsive Positioning and Animations */}
+        <div className="relative z-10 max-w-lg text-center md:text-right flex flex-col items-center justify-center h-full md:items-end md:justify-center">
+          <motion.h1
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            className="text-4xl md:text-5xl font-extrabold mb-4 md:mb-6"
+          >
+            Welcome to My Creative Space
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            className="text-lg md:text-xl text-white mb-6 md:mb-8"
+          >
+            Hi, I'm Noor. I design and develop web experiences that are visually
+            appealing and highly functional.
+          </motion.p>
+          <div className="flex flex-col space-y-4 md:space-y-0 md:flex-row md:space-x-4">
+            <motion.a
+              href="#projects"
+              className="inline-block px-8 py-3 bg-white text-black font-semibold rounded-lg hover:bg-gray-200 transition-transform transform hover:scale-105"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.5 }}
+            >
+              Explore My Work
+            </motion.a>
+            <motion.a
+              href="#contact"
+              className="inline-block px-8 py-3 border-2 border-white rounded-lg hover:bg-gray-800 transition-transform transform hover:scale-105"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.7 }}
+            >
+              Get in Touch
+            </motion.a>
+          </div>
+        </div>
+      </section>
 
       {/* Projects Section */}
       <section id="projects" className="max-w-7xl mx-auto py-16 px-6">
