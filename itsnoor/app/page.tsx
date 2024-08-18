@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <main className="relative min-h-screen bg-black text-white">
       {/* Navbar */}
-      <nav className="w-full py-4 bg-black shadow-md fixed top-0 left-0 z-50">
+      <nav className="w-full py-4 bg-transparent fixed top-0 left-0 z-50">
         <div className="max-w-7xl mx-auto flex justify-between items-center px-6">
           <h1 className="text-2xl font-bold">Noor's Portfolio</h1>
           <div className="hidden md:flex space-x-6">
@@ -51,32 +51,35 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Mobile Menu */}
-        {isOpen && (
-          <div className="md:hidden bg-black text-white px-6 pt-4 pb-2 animate-fade-in-down">
-            <a
-              href="#projects"
-              className="block py-2 hover:text-gray-400 transition-colors"
-              onClick={toggleMenu}
-            >
-              Projects
-            </a>
-            <a
-              href="#about"
-              className="block py-2 hover:text-gray-400 transition-colors"
-              onClick={toggleMenu}
-            >
-              About
-            </a>
-            <a
-              href="#contact"
-              className="block py-2 hover:text-gray-400 transition-colors"
-              onClick={toggleMenu}
-            >
-              Contact
-            </a>
-          </div>
-        )}
+       {/* Mobile Menu */}
+{isOpen && (
+  <div className="md:hidden bg-transparent text-white px-6 pt-4 pb-2 animate-fade-in-down">
+    <div className="flex flex-col items-center justify-center text-center space-y-2">
+      <a
+        href="#projects"
+        className="block py-2 hover:text-gray-400 transition-colors"
+        onClick={toggleMenu}
+      >
+        Projects
+      </a>
+      <a
+        href="#about"
+        className="block py-2 hover:text-gray-400 transition-colors"
+        onClick={toggleMenu}
+      >
+        About
+      </a>
+      <a
+        href="#contact"
+        className="block py-2 hover:text-gray-400 transition-colors"
+        onClick={toggleMenu}
+      >
+        Contact
+      </a>
+    </div>
+  </div>
+)}
+
       </nav>
 
       {/* Hero Section with Background Image */}
@@ -95,7 +98,7 @@ export default function Home() {
           <h1 className="text-5xl font-extrabold mb-6">
             Welcome to My Creative Space
           </h1>
-          <p className="text-xl text-white mb-8">
+          <p className="text-justify text-xl text-white mb-8">
             Hi, I'm Noor. I design and develop web experiences that are visually
             appealing and highly functional.
           </p>
@@ -134,7 +137,7 @@ export default function Home() {
 
           <div className="bg-black p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow transform hover:scale-105">
             <h3 className="text-2xl font-semibold mb-2 text-white">Project One</h3>
-            <p className="text-gray-400 mb-4">
+            <p className="text-justify text-gray-400 mb-4">
               A brief description of your project goes here. Highlight its key features or technologies used.
             </p>
             <a href="#" className="text-white hover:text-gray-400 transition-colors">
@@ -144,7 +147,7 @@ export default function Home() {
 
           <div className="bg-black p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow transform hover:scale-105">
             <h3 className="text-2xl font-semibold mb-2 text-white">Project One</h3>
-            <p className="text-gray-400 mb-4">
+            <p className="text-justify text-gray-400 mb-4">
               A brief description of your project goes here. Highlight its key features or technologies used.
             </p>
             <a href="#" className="text-white hover:text-gray-400 transition-colors">
@@ -154,7 +157,7 @@ export default function Home() {
 
           <div className="bg-black p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow transform hover:scale-105">
             <h3 className="text-2xl font-semibold mb-2 text-white">Project One</h3>
-            <p className="text-gray-400 mb-4">
+            <p className="text-justify text-gray-400 mb-4">
               A brief description of your project goes here. Highlight its key features or technologies used.
             </p>
             <a href="#" className="text-white hover:text-gray-400 transition-colors">
@@ -178,10 +181,10 @@ export default function Home() {
             />
           </div>
           <div className="md:w-1/2 md:pl-12">
-            <p className="text-lg text-white mb-6">
+            <p className="text-lg text-white text-justify mb-6">
               I'm a passionate web developer and designer with a love for creating beautiful, functional websites. My goal is to build web experiences that are not only visually appealing but also user-friendly and accessible.
             </p>
-            <p className="text-lg text-white mb-6">
+            <p className="text-lg text-white text-justify mb-6">
               I specialize in front-end development, with experience in React, Next.js, and modern CSS frameworks like Tailwind CSS. When I'm not coding, you can find me exploring new design trends or working on personal projects.
             </p>
           </div>
@@ -196,7 +199,7 @@ export default function Home() {
             I'm currently available for freelance projects and open to collaboration. Feel free to reach out to discuss your next big idea.
           </p>
           <a
-            href="mailto:your-email@example.com"
+            href="mailto:contactnavnoorsingh@gmail.com"
             className="px-8 py-3 bg-white text-black font-semibold rounded-lg hover:bg-gray-200 transition-transform transform hover:scale-105"
           >
             Contact Me
