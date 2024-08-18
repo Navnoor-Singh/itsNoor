@@ -11,7 +11,7 @@ export default function Home() {
   const [loopNum, setLoopNum] = useState(0);
   const [typingSpeed, setTypingSpeed] = useState(150);
 
-  const text = "Noor's Portfolio"; // Your title text
+  const text = "Navnoor's Portfolio"; // Your title text
   const blink = "_";
 
   // Typewriter effect logic
@@ -195,7 +195,7 @@ export default function Home() {
       transition={{ duration: 1 }}
       className="text-lg md:text-xl text-white mb-6 md:mb-8"
     >
-      Hi, I'm Noor. I design and develop web experiences that are visually
+      Hi, I'm Navnoor. I design and develop web experiences that are visually
       appealing and highly functional.
     </motion.p>
     <div className="flex flex-col space-y-4 md:space-y-0 md:flex-row md:space-x-4">
