@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <main className="relative min-h-screen bg-black text-white">
       {/* Navbar */}
-      <nav className="w-full py-4 bg-white shadow-md fixed top-0 left-0 z-50">
+      <nav className="w-full py-4 bg-black shadow-md fixed top-0 left-0 z-50">
         <div className="max-w-7xl mx-auto flex justify-between items-center px-6">
           <h1 className="text-2xl font-bold">Noor's Portfolio</h1>
           <div className="hidden md:flex space-x-6">
