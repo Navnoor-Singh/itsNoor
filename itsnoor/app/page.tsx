@@ -13,17 +13,17 @@ export default function Home() {
   return (
     <main className="relative min-h-screen bg-black text-white">
       {/* Navbar */}
-      <nav className="w-full py-4 bg-transparent fixed top-0 left-0 z-50">
+      <nav className="w-full py-4 bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg border-b border-black border-opacity-20 fixed top-0 left-0 z-50">
         <div className="max-w-7xl mx-auto flex justify-between items-center px-6">
-          <h1 className="text-2xl font-bold">Noor's Portfolio</h1>
+          <h1 className="text-2xl font-bold text-white">Noor's Portfolio</h1>
           <div className="hidden md:flex space-x-6">
-            <a href="#projects" className="hover:text-gray-400 transition-colors">
+            <a href="#projects" className="hover:text-gray-400 transition-colors text-white">
               Projects
             </a>
-            <a href="#about" className="hover:text-gray-400 transition-colors">
+            <a href="#about" className="hover:text-gray-400 transition-colors text-white">
               About
             </a>
-            <a href="#contact" className="hover:text-gray-400 transition-colors">
+            <a href="#contact" className="hover:text-gray-400 transition-colors text-white">
               Contact
             </a>
           </div>
@@ -51,35 +51,34 @@ export default function Home() {
           </div>
         </div>
 
-       {/* Mobile Menu */}
-{isOpen && (
-  <div className="md:hidden bg-transparent text-white px-6 pt-4 pb-2 animate-fade-in-down">
-    <div className="flex flex-col items-center justify-center text-center space-y-2">
-      <a
-        href="#projects"
-        className="block py-2 hover:text-gray-400 transition-colors"
-        onClick={toggleMenu}
-      >
-        Projects
-      </a>
-      <a
-        href="#about"
-        className="block py-2 hover:text-gray-400 transition-colors"
-        onClick={toggleMenu}
-      >
-        About
-      </a>
-      <a
-        href="#contact"
-        className="block py-2 hover:text-gray-400 transition-colors"
-        onClick={toggleMenu}
-      >
-        Contact
-      </a>
-    </div>
-  </div>
-)}
-
+        {/* Mobile Menu */}
+        {isOpen && (
+          <div className="md:hidden bg-transparent text-white px-6 pt-4 pb-2 animate-fade-in-down">
+            <div className="flex flex-col items-center justify-center text-center space-y-2">
+              <a
+                href="#projects"
+                className="block py-2 hover:text-gray-400 transition-colors"
+                onClick={toggleMenu}
+              >
+                Projects
+              </a>
+              <a
+                href="#about"
+                className="block py-2 hover:text-gray-400 transition-colors"
+                onClick={toggleMenu}
+              >
+                About
+              </a>
+              <a
+                href="#contact"
+                className="block py-2 hover:text-gray-400 transition-colors"
+                onClick={toggleMenu}
+              >
+                Contact
+              </a>
+            </div>
+          </div>
+        )}
       </nav>
 
       {/* Hero Section with Background Image */}
@@ -98,7 +97,7 @@ export default function Home() {
           <h1 className="text-5xl font-extrabold mb-6">
             Welcome to My Creative Space
           </h1>
-          <p className="text-justify text-xl text-white mb-8">
+          <p className="text-xl text-white mb-8">
             Hi, I'm Noor. I design and develop web experiences that are visually
             appealing and highly functional.
           </p>
@@ -126,7 +125,7 @@ export default function Home() {
           {/* Project Card */}
           <div className="bg-black p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow transform hover:scale-105">
             <h3 className="text-2xl font-semibold mb-2 text-white">Project One</h3>
-            <p className="text-gray-400 mb-4">
+            <p className="text-justify text-gray-400 mb-4">
               A brief description of your project goes here. Highlight its key features or technologies used.
             </p>
             <a href="#" className="text-white hover:text-gray-400 transition-colors">
@@ -134,9 +133,8 @@ export default function Home() {
             </a>
           </div>
           {/* Add more project cards here */}
-
           <div className="bg-black p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow transform hover:scale-105">
-            <h3 className="text-2xl font-semibold mb-2 text-white">Project One</h3>
+            <h3 className="text-2xl font-semibold mb-2 text-white">Project Two</h3>
             <p className="text-justify text-gray-400 mb-4">
               A brief description of your project goes here. Highlight its key features or technologies used.
             </p>
@@ -144,19 +142,8 @@ export default function Home() {
               View Project &rarr;
             </a>
           </div>
-
           <div className="bg-black p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow transform hover:scale-105">
-            <h3 className="text-2xl font-semibold mb-2 text-white">Project One</h3>
-            <p className="text-justify text-gray-400 mb-4">
-              A brief description of your project goes here. Highlight its key features or technologies used.
-            </p>
-            <a href="#" className="text-white hover:text-gray-400 transition-colors">
-              View Project &rarr;
-            </a>
-          </div>
-
-          <div className="bg-black p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow transform hover:scale-105">
-            <h3 className="text-2xl font-semibold mb-2 text-white">Project One</h3>
+            <h3 className="text-2xl font-semibold mb-2 text-white">Project Three</h3>
             <p className="text-justify text-gray-400 mb-4">
               A brief description of your project goes here. Highlight its key features or technologies used.
             </p>
