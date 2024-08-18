@@ -31,3 +31,15 @@ body {
     text-wrap: balance;
   }
 }
+
+/* .hero-bg {
+  background-image: url('/bgNoor.jpg');
+  background-position: left;
+}
+
+@media (max-width: 768px) {
+  .hero-bg {
+    background-color: black;
+    background-position: center;
+  }
+} */
