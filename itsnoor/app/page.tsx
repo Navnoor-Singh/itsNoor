@@ -11,9 +11,9 @@ export default function Home() {
   };
 
   return (
-    <main className="relative min-h-screen bg-black text-white">
+    <main className="relative min-h-screen bg-black text-white font-sans">
       {/* Navbar */}
-      <nav className="w-full py-4 bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg border-b border-black border-opacity-20 fixed top-0 left-0 z-50">
+      <nav className="w-full py-4 bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg border-b border-white border-opacity-20 fixed top-0 left-0 z-50">
         <div className="max-w-7xl mx-auto flex justify-between items-center px-6">
           <h1 className="text-2xl font-bold text-white">Noor's Portfolio</h1>
           <div className="hidden md:flex space-x-6">
@@ -97,7 +97,7 @@ export default function Home() {
           <h1 className="text-5xl font-extrabold mb-6">
             Welcome to My Creative Space
           </h1>
-          <p className="text-xl text-white mb-8">
+          <p className="text-justify text-xl text-white mb-8">
             Hi, I'm Noor. I design and develop web experiences that are visually
             appealing and highly functional.
           </p>
