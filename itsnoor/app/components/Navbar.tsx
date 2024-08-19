@@ -128,7 +128,7 @@ export default function Navbar() {
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              href="#about"
+              href="../page.tsx/#about"
               className="block py-2 hover:text-gray-400 transition-colors"
               onClick={() => setIsOpen(false)}
             >

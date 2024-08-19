@@ -3,51 +3,46 @@
 import React, { useEffect, useRef } from "react";
 import Navbar from "../components/Navbar";
 import { motion } from "framer-motion";
+import { VscGithub } from 'react-icons/vsc';
 
 export default function Projects() {
   const projects = [
     {
-      title: "Project One",
+      title: "Pygem",
       description:
-        "A detailed description of Project One goes here. This project involved creating a highly responsive web application with modern design and interactive features.",
-      technologies: "React, Next.js, Tailwind CSS, Node.js",
-      role: "Frontend Developer",
-      duration: "3 months",
+        "A logic-based game built with Pygame, focusing on the concept of overflow. This project was designed to challenge users with puzzle-like gameplay that increases in difficulty as players advance.",
+      technologies: "Python, Pygame, C++",
+      role: "Game Developer",
+      duration: "1 month",
       outcome:
-        "Delivered a full-featured, dynamic web application with real-time updates and interactive UI.",
-      githubLink: "https://github.com/username/project-one",
+        "Created an engaging game with logical challenges, successfully tested with various users for difficulty and enjoyment.",
+      githubLink: "https://github.com/Navnoor-Singh/pyGem",
     },
     {
-      title: "Project Two",
+      title: "AidPath",
       description:
-        "A detailed description of Project Two goes here. This project focused on creating a high-performance web application with scalable architecture.",
-      technologies: "Angular, Firebase, Bootstrap",
+        "Developed a web application for the Community Wellbeing Hackathon, aimed at connecting people with resources and support services. The app features an interactive map, real-time data, and a user-friendly interface.",
+      technologies: "React, Node.js, Express, MongoDB",
+      role: "UI/UX",
+      duration: "2 weeks",
+      outcome:
+        "Delivered a fully functional web app that was well-received at the hackathon, helping users find local resources efficiently.",
+      githubLink: "https://github.com/vsavchyn-dev/qq-seneca-hackathon-2024",
+    },
+    {
+      title: "it's Noor",
+      description:
+        "This personal portfolio website showcases various projects and skills. It is built with a modern stack, featuring dynamic components, animations, and a responsive design to provide an optimal viewing experience across devices.",
+      technologies: "React, Next.js, Tailwind CSS, Framer Motion",
       role: "Full Stack Developer",
-      duration: "4 months",
+      duration: "Ongoing",
       outcome:
-        "Successfully built and deployed a scalable web application with cloud-based backend and dynamic UI.",
-      githubLink: "https://github.com/username/project-two",
-    },
-    {
-      title: "Project Three",
-      description:
-        "A detailed description of Project Three goes here. This project showcases my backend development skills, focusing on secure and efficient data handling.",
-      technologies: "Vue.js, Laravel, MySQL",
-      role: "Backend Developer",
-      duration: "2 months",
-      outcome:
-        "Developed and deployed a secure, high-performance backend system with RESTful APIs.",
-      githubLink: "https://github.com/username/project-three",
+        "Created a professional and interactive platform to display work, including real-time updates and seamless user experience.",
+      githubLink: "https://github.com/Navnoor-Singh/itsNoor",
     },
   ];
 
-  const neonColors = [
-    "rgba(255, 0, 150, 0.7)", // Neon Pink
-    "rgba(0, 255, 255, 0.7)", // Neon Cyan
-    "rgba(255, 255, 0, 0.7)", // Neon Yellow
-  ];
-
-  const scrollContainerRef = useRef(null);
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -68,18 +63,16 @@ export default function Projects() {
       <Navbar />
       <section
         ref={scrollContainerRef}
-        className="fixed top-24 left-0 w-full h-full flex overflow-x-auto overflow-y-hidden" // Adjusted top margin
+        className="fixed top-24 left-0 w-full h-full flex overflow-x-auto overflow-y-hidden"
         style={{ scrollBehavior: "smooth" }}
       >
         {projects.map((project, index) => (
           <motion.div
-            key={index}
-            className="min-w-[85vw] h-[calc(85vh-4rem)] bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 p-12 rounded-lg shadow-lg flex flex-col justify-center text-white mx-8"
-            style={{
-              backgroundColor: neonColors[index],
-            }}
-            // whileHover={{ y: -10, zIndex: 10 }} // Raise the card by 10px on hover
-          >
+          key={index}
+          className="min-w-[85vw] h-[calc(85vh-4rem)] shadow-lg flex flex-col justify-center text-white mx-8 card"
+          // whileHover={{ y: -10, zIndex: 10 }}
+        >
+          <div className="card-content">
             <motion.h2
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -122,14 +115,16 @@ export default function Projects() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1.6 }}
-              className="inline-block px-8 py-4 text-xl text-black bg-white font-semibold rounded-lg shadow-md hover:bg-gray-200"
+              className="relative inline-flex items-center px-8 py-4 text-xl font-semibold rounded-md minimalist-button"
             >
-              <span role="img" aria-label="GitHub">
-                💻
-              </span>{" "}
-              View on GitHub
+              <VscGithub className="mr-2" /> GitHub
             </motion.a>
-          </motion.div>
+
+
+
+          </div>
+        </motion.div>
+        
         ))}
       </section>
     </main>
