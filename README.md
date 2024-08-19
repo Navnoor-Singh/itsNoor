@@ -38,19 +38,19 @@ To get a local copy of this project up and running, follow these steps:
 git clone <https://github.com/Navnoor-Singh/itsNoor.git>
 
 ```
-1. **Navigate to the project directory:**
+2. **Navigate to the project directory:**
 
 ```
 cd itsNoor
 ```
 
-2. **Install dependencies:**
+3. **Install dependencies:**
 
 ```
 npm install
 ```
 
-3. **Start the development server:**
+4. **Start the development server:**
 
 ```
 npm run dev
