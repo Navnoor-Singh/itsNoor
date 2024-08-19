@@ -74,7 +74,7 @@ export default function Navbar() {
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            href="#about"
+            href="/#about"
             className="hover:text-gray-400 transition-colors text-white"
           >
             About
@@ -83,7 +83,7 @@ export default function Navbar() {
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            href="#contact"
+            href="/#contact"
             className="hover:text-gray-400 transition-colors text-white"
           >
             Contact
@@ -128,7 +128,7 @@ export default function Navbar() {
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              href="../page.tsx/#about"
+              href="/#about"
               className="block py-2 hover:text-gray-400 transition-colors"
               onClick={() => setIsOpen(false)}
             >
@@ -138,7 +138,7 @@ export default function Navbar() {
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
-              href="#contact"
+              href="/#contact"
               className="block py-2 hover:text-gray-400 transition-colors"
               onClick={() => setIsOpen(false)}
             >

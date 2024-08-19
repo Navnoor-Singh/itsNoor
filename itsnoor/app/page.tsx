@@ -1,6 +1,7 @@
 "use client";
 
 import Navbar from "../app/components/Navbar"; // Import the Navbar component
+import Footer from "../app/components/Footer";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -82,59 +83,49 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Projects Section */}
-      <section id="projects" className="max-w-7xl mx-auto py-16 px-6">
-        <h2 className="text-4xl font-bold mb-12 text-white">Featured Projects</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {/* Project Card */}
-          <div className="bg-black p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow transform hover:scale-105">
-            <h3 className="text-2xl font-semibold mb-2 text-white">
-              Project One
-            </h3>
-            <p className="text-justify text-gray-400 mb-4">
-              A brief description of your project goes here. Highlight its key
-              features or technologies used.
-            </p>
-            <a
-              href="#"
-              className="text-white hover:text-gray-400 transition-colors"
-            >
-              View Project &rarr;
-            </a>
-          </div>
-          {/* Add more project cards here */}
-          <div className="bg-black p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow transform hover:scale-105">
-            <h3 className="text-2xl font-semibold mb-2 text-white">
-              Project Two
-            </h3>
-            <p className="text-justify text-gray-400 mb-4">
-              A brief description of your project goes here. Highlight its key
-              features or technologies used.
-            </p>
-            <a
-              href="#"
-              className="text-white hover:text-gray-400 transition-colors"
-            >
-              View Project &rarr;
-            </a>
-          </div>
-          <div className="bg-black p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow transform hover:scale-105">
-            <h3 className="text-2xl font-semibold mb-2 text-white">
-              Project Three
-            </h3>
-            <p className="text-justify text-gray-400 mb-4">
-              A brief description of your project goes here. Highlight its key
-              features or technologies used.
-            </p>
-            <a
-              href="#"
-              className="text-white hover:text-gray-400 transition-colors"
-            >
-              View Project &rarr;
-            </a>
-          </div>
-        </div>
-      </section>
+     {/* Projects Section */}
+<section id="projects" className="max-w-7xl mx-auto py-16 px-6">
+  <h2 className="text-4xl font-bold mb-12 text-white">Featured Projects</h2>
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    {/* Project Card 1 - Pygem */}
+    <div className="card bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow transform hover:scale-105 relative z-10">
+      <h3 className="text-5xl font-semibold mb-6 text-white">pyGem</h3>
+      <a
+        href="/projects"
+        className="relative inline-block px-8 py-3 text-lg font-semibold rounded-md bg-black text-white border-2 border-black transition-all duration-300 hover:bg-white hover:text-black z-20"
+      >
+        View Project &rarr;
+      </a>
+    </div>
+
+    {/* Project Card 2 - AidPath */}
+    <div className="card bg-gradient-to-r from-blue-400 via-green-500 to-teal-500 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow transform hover:scale-105 relative z-10">
+      <h3 className="text-5xl font-semibold mb-6 text-white">aidPath</h3>
+      <a
+        href="/projects"
+        className="relative inline-block px-8 py-3 text-lg font-semibold rounded-md bg-black text-white border-2 border-black transition-all duration-300 hover:bg-white hover:text-black z-20"
+      >
+        View Project &rarr;
+      </a>
+    </div>
+
+    {/* Project Card 3 - it'sNoor */}
+    <div className="card bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow transform hover:scale-105 relative z-10">
+      <h3 className="text-5xl font-semibold mb-6 text-white">it's Noor</h3>
+      <a
+        href="/projects"
+        className="relative inline-block px-8 py-3 text-lg font-semibold rounded-md bg-black text-white border-2 border-black transition-all duration-300 hover:bg-white hover:text-black z-20"
+      >
+        View Project &rarr;
+      </a>
+    </div>
+  </div>
+</section>
+
+
+
+
+
 
       {/* About Section */}
       <section id="about" className="max-w-7xl mx-auto py-16 px-6">
@@ -167,23 +158,25 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <footer id="contact" className="bg-black py-16">
+      <footer id="contact" className="bg-white py-16">
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-8 text-white">
+          <h2 className="text-4xl font-bold mb-8 text-black">
             Let's Work Together
           </h2>
-          <p className="text-lg text-white mb-8">
-            I'm currently available for freelance projects and open to
-            collaboration. Feel free to reach out to discuss your next big idea.
+          <p className="text-lg text-black mb-8 max-w-[70vw] mx-auto text-center">
+            I'm currently available for freelance projects and open to collaboration. Feel free to reach out to discuss your next big idea.
           </p>
+
           <a
             href="mailto:contactnavnoorsingh@gmail.com"
-            className="px-8 py-3 bg-white text-black font-semibold rounded-lg hover:bg-gray-200 transition-transform transform hover:scale-105"
+            className="px-8 py-3 bg-black text-white font-semibold rounded-lg border-2 border-transparent hover:bg-white hover:text-black hover:border-black transition-colors transition-transform duration-300 ease-in-out transform hover:scale-105"
+
           >
             Contact Me
           </a>
         </div>
       </footer>
+      <Footer />
     </main>
   );
 }

@@ -67,15 +67,49 @@ body {
   }
 }
 
+
 .card {
   position: relative;
   background: linear-gradient(270deg, rgba(255, 0, 150, 0.7), rgba(0, 255, 255, 0.7), rgba(255, 255, 0, 0.7));
   background-size: 600% 600%;
   animation: cyberpunkGradient 10s ease infinite;
-  padding: 40px;
+  padding: 50px;
   border-radius: 8px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Slight box shadow for depth */
 }
+
+@media (max-width: 768px) {
+  .card {
+    background: linear-gradient(270deg, rgba(255, 0, 150, 0.7), rgba(0, 255, 255, 0.7), rgba(255, 255, 0, 0.7)); /* Ensure gradient is maintained on mobile */
+  }
+  
+  .card::before {
+    background: rgba(0, 0, 0, 0.3); /* Lighter overlay on mobile */
+  }
+}
+@media (max-width: 768px) {
+  .card {
+    background: linear-gradient(270deg, rgba(255, 0, 150, 0.7), rgba(0, 255, 255, 0.7), rgba(255, 255, 0, 0.7));
+    background-size: 600% 600%;
+    animation: cyberpunkGradient 10s ease infinite;
+    backdrop-filter: blur(10px); /* Glassmorphism effect on mobile */
+    border-radius: 8px;
+    padding: 50px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Consistent box shadow for depth */
+  }
+  
+  .card::before {
+    background: rgba(0, 0, 0, 0.5); /* Keep the dark overlay consistent with desktop */
+  }
+  
+  .card-content {
+    z-index: 2;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* Ensure readability on mobile */
+  }
+}
+
+
+
 
 .card::before {
   content: "";

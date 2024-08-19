@@ -1,7 +1,8 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 import { motion } from "framer-motion";
 import { VscGithub } from 'react-icons/vsc';
 
@@ -42,91 +43,159 @@ export default function Projects() {
     },
   ];
 
-  const scrollContainerRef = useRef<HTMLDivElement>(null);
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.3,
+      },
+    },
+  };
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (scrollContainerRef.current) {
-        scrollContainerRef.current.scrollLeft = window.scrollY * 4; // Increase speed of horizontal scroll
-      }
-    };
+  const cardVariantsDesktop = {
+    hidden: { opacity: 0, y: 50 },
+    show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
+  };
 
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  const cardVariantsMobile = {
+    hidden: { opacity: 0, x: -50 },
+    show: { opacity: 1, x: 0, transition: { duration: 0.8, ease: "easeOut" } },
+  };
 
   return (
-    <main className="relative min-h-[300vh] bg-black text-white font-sans">
+    <main className="relative min-h-screen bg-black text-white font-sans mt-28">
       <Navbar />
-      <section
-        ref={scrollContainerRef}
-        className="fixed top-24 left-0 w-full h-full flex overflow-x-auto overflow-y-hidden"
-        style={{ scrollBehavior: "smooth" }}
-      >
-        {projects.map((project, index) => (
-          <motion.div
-          key={index}
-          className="min-w-[85vw] h-[calc(85vh-4rem)] shadow-lg flex flex-col justify-center text-white mx-8 card"
-          // whileHover={{ y: -10, zIndex: 10 }}
+      <section className="flex flex-col md:flex-row md:overflow-x-auto">
+        <motion.div
+          className="md:hidden px-8 py-16 space-y-16"
+          variants={containerVariants}
+          initial="hidden"
+          animate="show"
         >
-          <div className="card-content">
-            <motion.h2
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 1 }}
-              className="text-4xl font-extrabold mb-6"
+          {projects.map((project, index) => (
+            <motion.div
+              key={index}
+              className="card w-full h-auto bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 shadow-lg p-8 flex flex-col justify-center text-white mx-auto rounded-lg"
+              variants={cardVariantsMobile}
             >
-              {project.title}
-            </motion.h2>
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 1.2 }}
-              className="text-2xl mb-6"
-            >
-              {project.description}
-            </motion.p>
-            <motion.ul
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 1.4 }}
-              className="text-lg mb-8 space-y-3"
-            >
-              <li>
-                <strong>Technologies Used:</strong> {project.technologies}
-              </li>
-              <li>
-                <strong>Role:</strong> {project.role}
-              </li>
-              <li>
-                <strong>Duration:</strong> {project.duration}
-              </li>
-              <li>
-                <strong>Outcome:</strong> {project.outcome}
-              </li>
-            </motion.ul>
-            <motion.a
-              href={project.githubLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 1.6 }}
-              className="relative inline-flex items-center px-8 py-4 text-xl font-semibold rounded-md minimalist-button"
-            >
-              <VscGithub className="mr-2" /> GitHub
-            </motion.a>
-
-
-
-          </div>
+              <div className="card-content">
+                <motion.h2
+                  className="text-3xl font-extrabold mb-6"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 1 }}
+                >
+                  {project.title}
+                </motion.h2>
+                <motion.p
+                  className="text-lg mb-6"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 1.2 }}
+                >
+                  {project.description}
+                </motion.p>
+                <motion.ul
+                  className="text-base mb-8 space-y-3"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 1.4 }}
+                >
+                  <li>
+                    <strong>Technologies Used:</strong> {project.technologies}
+                  </li>
+                  <li>
+                    <strong>Role:</strong> {project.role}
+                  </li>
+                  <li>
+                    <strong>Duration:</strong> {project.duration}
+                  </li>
+                  <li>
+                    <strong>Outcome:</strong> {project.outcome}
+                  </li>
+                </motion.ul>
+                <motion.a
+                  href={project.githubLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative inline-flex items-center px-6 py-3 text-lg font-semibold rounded-md minimalist-button"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 1.6 }}
+                >
+                  <VscGithub className="mr-2" /> GitHub
+                </motion.a>
+              </div>
+            </motion.div>
+          ))}
         </motion.div>
-        
-        ))}
+
+        <motion.div
+          className="hidden md:flex space-x-8 px-8"
+          variants={containerVariants}
+          initial="hidden"
+          animate="show"
+        >
+          {projects.map((project, index) => (
+            <motion.div
+              key={index}
+              className="card min-w-[85vw] h-[calc(85vh-4rem)] shadow-lg flex flex-col justify-center text-white mx-8 rounded-lg"
+              variants={cardVariantsDesktop}
+            >
+              <div className="card-content">
+                <motion.h2
+                  className="text-3xl sm:text-4xl font-extrabold mb-6"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 1 }}
+                >
+                  {project.title}
+                </motion.h2>
+                <motion.p
+                  className="text-lg sm:text-xl md:text-2xl mb-6"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 1.2 }}
+                >
+                  {project.description}
+                </motion.p>
+                <motion.ul
+                  className="text-base sm:text-lg md:text-xl mb-8 space-y-3"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 1.4 }}
+                >
+                  <li>
+                    <strong>Technologies Used:</strong> {project.technologies}
+                  </li>
+                  <li>
+                    <strong>Role:</strong> {project.role}
+                  </li>
+                  <li>
+                    <strong>Duration:</strong> {project.duration}
+                  </li>
+                  <li>
+                    <strong>Outcome:</strong> {project.outcome}
+                  </li>
+                </motion.ul>
+                <motion.a
+                  href={project.githubLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative inline-flex items-center px-6 sm:px-8 py-3 sm:py-4 text-lg sm:text-xl font-semibold rounded-md minimalist-button"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 1.6 }}
+                >
+                  <VscGithub className="mr-2" /> GitHub
+                </motion.a>
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
       </section>
+      <Footer /> {/* The footer is now properly positioned at the bottom */}
     </main>
   );
 }
