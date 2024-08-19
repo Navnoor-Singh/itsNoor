@@ -1,5 +1,5 @@
 # itsNoor
-# Noor's Portfolio
+# Navnoor's Portfolio
 
 Welcome to my personal portfolio website! This project showcases my work, skills, and experiences as a web developer and designer. The site is built using **Next.js**, **Tailwind CSS**, and **Framer Motion** to create a smooth, responsive, and interactive user experience.
 
