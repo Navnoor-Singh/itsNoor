@@ -1,5 +1,5 @@
 # itsNoor
-**Noor's Portfolio**
+# Noor's Portfolio
 
 Welcome to my personal portfolio website! This project showcases my work, skills, and experiences as a web developer and designer. The site is built using **Next.js**, **Tailwind CSS**, and **Framer Motion** to create a smooth, responsive, and interactive user experience.
 
@@ -34,35 +34,27 @@ To get a local copy of this project up and running, follow these steps:
 
 1. **Clone the repository:**
 
-bash
-
-Copy code
-
+```
 git clone <https://github.com/Navnoor-Singh/itsNoor.git>
 
+```
 1. **Navigate to the project directory:**
 
-bash
-
-Copy code
-
+```
 cd itsNoor
+```
 
-1. **Install dependencies:**
+2. **Install dependencies:**
 
-bash
-
-Copy code
-
+```
 npm install
+```
 
-1. **Start the development server:**
+3. **Start the development server:**
 
-bash
-
-Copy code
-
+```
 npm run dev
+```
 
 Your site will be available at <http://localhost:3000>.
 
@@ -72,17 +64,19 @@ This site can be easily deployed using Vercel:
 
 1. **Push your changes to GitHub:**
 
-bash
-
-Copy code
-
+```
 git add .
+```
 
+```
 git commit -m "Initial commit"
+```
 
+```
 git push origin main
+```
 
-1. **Deploy to Vercel:**
+2. **Deploy to Vercel:**
     - Log in to [Vercel](https://vercel.com/) and link your GitHub repository.
     - Deploy the project directly from Vercel's dashboard.
 
