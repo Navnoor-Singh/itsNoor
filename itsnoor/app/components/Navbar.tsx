@@ -118,6 +118,15 @@ export default function Navbar() {
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              <Link href="/" className="block py-2 hover:text-gray-400 transition-colors" onClick={() => setIsOpen(false)}>
+                Home
+              </Link>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
             >
               <Link href="/projects" className="block py-2 hover:text-gray-400 transition-colors" onClick={() => setIsOpen(false)}>
