@@ -1,0 +1,18 @@
+{/* Project 1 */}
+          <div className="min-w-[85vw] h-[calc(85vh-4rem)] bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 p-12 rounded-lg shadow-lg flex flex-col justify-center text-white">
+            <h2 className="text-6xl font-extrabold mb-6">Project One</h2>
+            <p className="text-2xl mb-6">
+              A detailed description of Project One goes here. This project
+              involved creating a highly responsive web application with modern
+              design and interactive features.
+            </p>
+            <ul className="text-lg mb-8 space-y-3">
+              <li><strong>Technologies Used:</strong> React, Next.js, Tailwind CSS, Node.js</li>
+              <li><strong>Role:</strong> Frontend Developer</li>
+              <li><strong>Duration:</strong> 3 months</li>
+              <li><strong>Outcome:</strong> Delivered a full-featured, dynamic web application with real-time updates and interactive UI.</li>
+            </ul>
+            <a href="#" className="inline-block px-8 py-4 text-xl text-black bg-white font-semibold rounded-lg shadow-md hover:bg-gray-200">
+              <span role="img" aria-label="GitHub">View on GitHub</span>
+            </a>
+          </div>
