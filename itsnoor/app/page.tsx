@@ -87,38 +87,47 @@ export default function Home() {
 <section id="projects" className="max-w-7xl mx-auto py-16 px-6">
   <h2 className="text-4xl font-bold mb-12 text-white">Featured Projects</h2>
   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-    {/* Project Card 1 - Pygem */}
-    <div className="card bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow transform hover:scale-105 relative z-10">
-      <h3 className="text-5xl font-semibold mb-6 text-white">pyGem</h3>
-      <a
-        href="/projects"
-        className="relative inline-block px-8 py-3 text-lg font-semibold rounded-md bg-black text-white border-2 border-black transition-all duration-300 hover:bg-white hover:text-black z-20"
-      >
-        View Project &rarr;
-      </a>
-    </div>
+   {/* Project Card 1 - Pygem */}
+<div className="card bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow transform hover:scale-105 relative">
+  <div className="card-content">
+    <h3 className="text-3xl font-semibold mb-6 text-white">pyGem</h3>
+    <a
+      href="/projects"
+      className="relative inline-block px-8 py-3 text-lg font-semibold rounded-md bg-black text-white border-2 border-black transition-all duration-300 hover:bg-white hover:text-black z-20"
+    >
+      View Project &rarr;
+    </a>
+  </div>
+</div>
+
+
 
     {/* Project Card 2 - AidPath */}
-    <div className="card bg-gradient-to-r from-blue-400 via-green-500 to-teal-500 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow transform hover:scale-105 relative z-10">
-      <h3 className="text-5xl font-semibold mb-6 text-white">aidPath</h3>
-      <a
-        href="/projects"
-        className="relative inline-block px-8 py-3 text-lg font-semibold rounded-md bg-black text-white border-2 border-black transition-all duration-300 hover:bg-white hover:text-black z-20"
-      >
-        View Project &rarr;
-      </a>
-    </div>
+<div className="card bg-gradient-to-r from-blue-400 via-green-500 to-teal-500 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow transform hover:scale-105 relative">
+  <div className="card-content">
+    <h3 className="text-3xl font-semibold mb-6 text-white">aidPath</h3>
+    <a
+      href="/projects"
+      className="relative inline-block px-8 py-3 text-lg font-semibold rounded-md bg-black text-white border-2 border-black transition-all duration-300 hover:bg-white hover:text-black z-20"
+    >
+      View Project &rarr;
+    </a>
+  </div>
+</div>
 
-    {/* Project Card 3 - it'sNoor */}
-    <div className="card bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow transform hover:scale-105 relative z-10">
-      <h3 className="text-5xl font-semibold mb-6 text-white">it's Noor</h3>
-      <a
-        href="/projects"
-        className="relative inline-block px-8 py-3 text-lg font-semibold rounded-md bg-black text-white border-2 border-black transition-all duration-300 hover:bg-white hover:text-black z-20"
-      >
-        View Project &rarr;
-      </a>
-    </div>
+{/* Project Card 3 - Treasure Hunt */}
+<div className="card bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow transform hover:scale-105 relative">
+  <div className="card-content">
+    <h3 className="text-3xl font-semibold mb-6 text-white">treasureHunt</h3>
+    <a
+      href="/projects"
+      className="relative inline-block px-8 py-3 text-lg font-semibold rounded-md bg-black text-white border-2 border-black transition-all duration-300 hover:bg-white hover:text-black z-20"
+    >
+      View Project &rarr;
+    </a>
+  </div>
+</div>
+
   </div>
 </section>
 

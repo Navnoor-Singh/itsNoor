@@ -31,15 +31,14 @@ export default function Projects() {
       githubLink: "https://github.com/vsavchyn-dev/qq-seneca-hackathon-2024",
     },
     {
-      title: "it's Noor",
-      description:
-        "This personal portfolio website showcases various projects and skills. It is built with a modern stack, featuring dynamic components, animations, and a responsive design to provide an optimal viewing experience across devices.",
-      technologies: "React, Next.js, Tailwind CSS, Framer Motion",
-      role: "Full Stack Developer",
-      duration: "Ongoing",
-      outcome:
-        "Created a professional and interactive platform to display work, including real-time updates and seamless user experience.",
-      githubLink: "https://github.com/Navnoor-Singh/itsNoor",
+      title: "TreasureHuntGame",
+      description: "A command-line game where players navigate a path to find hidden treasures while avoiding bombs. The game features configurable player lives, path length, and move limits, with interactive gameplay elements and status updates.",
+      technologies: "C, Standard I/O, Conditional Logic, Loops",
+      role: "C Programmer",
+      duration: "24 hours",
+      outcome:"Developed a fully functional game that allows players to configure settings, play multiple rounds, and receive immediate feedback on their progress, enhancing programming skills in C.",
+      githubLink: "https://github.com/Navnoor-Singh/treasureHunt"
+
     },
   ];
 
