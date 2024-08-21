@@ -88,6 +88,15 @@ export default function Navbar() {
           >
             Contact
           </motion.a>
+          <motion.a
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            href="/resume"
+            className="hover:text-gray-400 transition-colors text-white"
+          >
+            Résumé
+          </motion.a>
         </div>
         <div className="md:hidden">
           <button
@@ -147,11 +156,21 @@ export default function Navbar() {
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
-              href="/#contact"
+              href="/contact"
               className="block py-2 hover:text-gray-400 transition-colors"
               onClick={() => setIsOpen(false)}
             >
               Contact
+            </motion.a>
+            <motion.a
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              href="/resume"
+              className="block py-2 hover:text-gray-400 transition-colors"
+              onClick={() => setIsOpen(false)}
+            >
+              Résumé
             </motion.a>
           </div>
         </div>

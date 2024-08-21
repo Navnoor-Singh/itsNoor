@@ -131,36 +131,45 @@ export default function Home() {
   </div>
 </section>
 
-      {/* About Section */}
-      <section id="about" className="max-w-7xl mx-auto py-16 px-6">
-        <h2 className="text-4xl font-bold mb-12 text-white">About Me</h2>
-        <div className="flex flex-col md:flex-row items-center">
-          <div className="md:w-1/2 mb-8 md:mb-0">
-            <Image
-              src="/noorProj.jpg" // Add your profile image here
-              alt="Profile Picture"
-              className="rounded-lg"
-              width={600}
-              height={300}
-            />
-          </div>
-          <div className="md:w-1/2 md:pl-12">
-            <p className="text-lg text-white text-justify mb-6">
-              I'm a passionate web developer and designer with a love for
-              creating beautiful, functional websites. My goal is to build web
-              experiences that are not only visually appealing but also
-              user-friendly and accessible.
-            </p>
-            <p className="text-lg text-white text-justify mb-6">
-              I specialize in front-end development, with experience in React,
-              Next.js, and modern CSS frameworks like Tailwind CSS. When I'm not
-              coding, you can find me exploring new design trends or working on
-              personal projects.
-            </p>
+          {/* About Section */}
+    <section id="about" className="max-w-7xl mx-auto py-16 px-6">
+      <h2 className="text-4xl font-bold mb-12 text-white">About Me</h2>
+      <div className="flex flex-col md:flex-row items-center">
+        <div className="md:w-1/2 mb-8 md:mb-0">
+          <Image
+            src="/noorProj.jpg" // Add your profile image here
+            alt="Profile Picture"
+            className="rounded-lg"
+            width={600}
+            height={300}
+          />
+        </div>
+        <div className="md:w-1/2 md:pl-12">
+          <p className="text-lg text-white text-justify mb-6">
+            I'm a passionate web developer and designer with a love for
+            creating beautiful, functional websites. My goal is to build web
+            experiences that are not only visually appealing but also
+            user-friendly and accessible.
+          </p>
+          <p className="text-lg text-white text-justify mb-6">
+            I specialize in front-end development, with experience in React,
+            Next.js, and modern CSS frameworks like Tailwind CSS. When I'm not
+            coding, you can find me exploring new design trends or working on
+            personal projects.
+          </p>
+
+          {/* Add the button here */}
+          <div className="mt-8">
+            <a
+              href="/resume"
+              className="px-8 py-3 font-semibold rounded-lg text-white border-2 border-black bg-black button-gradient inset-animation transform transition-transform hover:scale-105"
+              >
+              Wanna know more? Check out my Résumé
+            </a>
           </div>
         </div>
-      </section>
-
+      </div>
+    </section>
       {/* Contact Section */}
       <footer id="contact" className="bg-white py-16">
         <div className="max-w-7xl mx-auto text-center">

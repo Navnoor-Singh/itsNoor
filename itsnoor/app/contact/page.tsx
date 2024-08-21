@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar"; // Adjust the path based on your proj
 import Footer from "../components/Footer";
 import emailjs from "emailjs-com";
 import React from "react";
+import { TbBulb } from "react-icons/tb";
 
 export default function Contact() {
     function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
@@ -36,7 +37,7 @@ export default function Contact() {
         ).then(
             (result) => {
                 console.log(result.text);
-                alert('Message sent successfully!');
+                alert('Transmission complete! Your message is now traversing the digital cosmos. 🚀');
             },
             (error) => {
                 console.log(error.text);
@@ -61,10 +62,10 @@ export default function Contact() {
       </video>
 
       {/* Frosted Glass Overlay */}
-      <div className="fixed inset-0 w-full h-full bg-black bg-opacity-30 backdrop-blur-lg z-10 pointer-events-none"></div>
+      <div className="fixed inset-0 w-full h-full bg-black bg-opacity-50 backdrop-blur-lg z-10 pointer-events-none"></div>
 
       {/* Content */}
-      <Navbar className="relative z-20" />
+      <Navbar />
 
       {/* Contact Section */}
       <section id="contact" className="relative z-20 max-w-7xl mx-auto py-16 px-6 mt-24">
@@ -102,21 +103,22 @@ export default function Contact() {
             </div>
 
             <div className="mb-4">
-              <label className="block text-left text-lg font-semibold mb-2" htmlFor="message">
-                Message
-              </label>
-              <textarea
-                id="message"
-                name="message"  // Matches the EmailJS template placeholder
-                required
-                rows={5}
-                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-white bg-transparent text-white"
-              ></textarea>
-            </div>
+                <label className="flex items-center text-left text-lg font-semibold mb-2" htmlFor="message">
+                    Idea <TbBulb className="ml-2" />
+                </label>
+                <textarea
+                    id="message"
+                    name="message"  // Matches the EmailJS template placeholder
+                    required
+                    rows={5}
+                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-white bg-transparent text-white"
+                ></textarea>
+                </div>
+
 
             <button
                 type="submit"
-                className="px-8 py-3 font-semibold rounded-lg text-white border-2 border-black bg-black inset-animation"
+                className="px-8 py-3 font-semibold rounded-lg text-white border-2 border-white bg-black inset-animation"
                 >
                 Send Message
                 </button>
@@ -124,9 +126,6 @@ export default function Contact() {
           </form>
         </div>
       </section>
-
-      {/* Footer */}
-      <Footer />
     </main>
   );
 }
