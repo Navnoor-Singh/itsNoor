@@ -131,11 +131,6 @@ export default function Home() {
   </div>
 </section>
 
-
-
-
-
-
       {/* About Section */}
       <section id="about" className="max-w-7xl mx-auto py-16 px-6">
         <h2 className="text-4xl font-bold mb-12 text-white">About Me</h2>
@@ -177,7 +172,7 @@ export default function Home() {
           </p>
 
           <a
-            href="mailto:contactnavnoorsingh@gmail.com"
+            href="/contact"
             className="px-8 py-3 bg-black text-white font-semibold rounded-lg border-2 border-transparent hover:bg-white hover:text-black hover:border-black transition-colors transition-transform duration-300 ease-in-out transform hover:scale-105"
 
           >

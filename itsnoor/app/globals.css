@@ -147,3 +147,29 @@ body {
 /* .minimalist-button span {
   vertical-align: middle;
 } */
+
+
+.button-gradient {
+  background: linear-gradient(270deg, rgba(255, 0, 150, 0.7), rgba(0, 255, 255, 0.7), rgba(255, 255, 0, 0.7));
+  background-size: 600% 600%;
+  animation: cyberpunkGradient 10s ease infinite;
+  color: #fff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* Optional for better readability */
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.inset-animation {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.inset-animation:hover {
+  transform: translateY(2px);
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.inset-animation:active {
+  transform: translateY(4px);
+  box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.7);
+}
+
