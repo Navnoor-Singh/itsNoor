@@ -158,15 +158,16 @@ export default function Home() {
             personal projects.
           </p>
 
-          {/* Add the button here */}
           <div className="mt-8">
             <a
               href="/resume"
-              className="px-8 py-3 font-semibold rounded-lg text-white border-2 border-black bg-black button-gradient inset-animation transform transition-transform hover:scale-105"
-              >
+              className="w-full md:w-auto px-4 py-2 md:px-8 md:py-3 font-semibold text-sm md:text-base rounded-lg text-white border-2 border-black bg-black button-gradient inset-animation transform transition-transform hover:scale-105 text-center inline-block"
+            >
               Wanna know more? Check out my Résumé
             </a>
           </div>
+
+
         </div>
       </div>
     </section>
