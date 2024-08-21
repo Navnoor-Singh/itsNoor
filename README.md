@@ -1,34 +1,36 @@
 # itsNoor
 # Navnoor's Portfolio
 
-Welcome to my personal portfolio website! This project showcases my work, skills, and experiences as a web developer and designer. The site is built using **Next.js**, **Tailwind CSS**, and **Framer Motion** to create a smooth, responsive, and interactive user experience.
+Welcome to my personal portfolio website! This project showcases my work, skills, and experiences as a web developer and designer. The site is built using **Next.js**, **Tailwind CSS**, **Framer Motion**, and **EmailJS** to create a smooth, responsive, and interactive user experience.
 
-**Features**
+## Features
 
-- **Responsive Design:** The website is fully responsive, with a smooth transition between desktop and mobile views.
-- **Dynamic Background:** The desktop view features a background image, while the mobile view uses a background video. The transition between these views is smooth and visually appealing.
-- **Typewriter Effect:** The site title in the navbar features a typewriter effect, giving it a dynamic, professional look.
-- **Interactive Navbar:** The navbar is responsive, with a hamburger menu that slides in on mobile devices.
-- **Animated Content:** The content on the homepage, including text and buttons, features smooth animations using Framer Motion.
-- **Featured Projects:** A section that showcases my top projects with interactive hover effects.
-- **About Me:** A brief section that provides information about my background, skills, and interests.
-- **Contact Me:** A contact section for potential clients or collaborators to reach out.
+- **Responsive Design**: The website is fully responsive, ensuring a seamless experience across desktop and mobile devices.
+- **Dynamic Background**: The desktop view features a background image, while the mobile view uses a background video. The transition between these views is smooth and visually appealing.
+- **Animated Content**: The content throughout the site, including text, buttons, and sections, features smooth animations using Framer Motion.
+- **Interactive Navbar**: The navbar is responsive, with a hamburger menu that slides in on mobile devices, offering an easy and intuitive navigation experience.
+- **Featured Projects**: A section that showcases my top projects with interactive hover effects and background animations.
+- **About Me**: A detailed section providing information about my background, skills, and interests, with links to my resume and additional information.
+- **Contact Me**: A contact section powered by **EmailJS**, allowing potential clients or collaborators to send inquiries directly to my email.
+- **Cyberpunk Gradient Effects**: Several elements, including buttons and cards, use a custom cyberpunk gradient effect that enhances the visual appeal.
+- **Islands for Information**: Key information such as certifications, languages, and locations are presented as clickable "islands" with hover effects, leading to external resources like Wikipedia.
 
-**Technologies Used**
+## Technologies Used
 
-- **Next.js:** A powerful React framework for building server-side rendered applications.
-- **Tailwind CSS:** A utility-first CSS framework for fast and efficient styling.
-- **Framer Motion:** A library for creating smooth animations and interactions in React.
-- **HTML5 & CSS3:** The foundational technologies for building web pages.
+- **Next.js**: A powerful React framework for building server-side rendered and statically generated applications.
+- **Tailwind CSS**: A utility-first CSS framework for fast and efficient styling.
+- **Framer Motion**: A library for creating smooth animations and interactions in React.
+- **EmailJS**: A service for sending emails directly from the client-side, used in the contact form to send inquiries.
+- **HTML5 & CSS3**: The foundational technologies for building and styling web pages.
 
-**Getting Started**
+## Getting Started
 
 To get a local copy of this project up and running, follow these steps:
 
-**Prerequisites**
+### Prerequisites
 
 - **Node.js**: Ensure you have Node.js installed on your machine. You can download it from [here](https://nodejs.org/).
-- **npm**: Node Package Manager, which comes with Node.js.
+- **npm**: Node Package Manager, which comes with Node.js
 
 **Installation**
 
