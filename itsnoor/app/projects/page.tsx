@@ -57,6 +57,11 @@ export default function Projects() {
     show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
   };
 
+  const cardVariantsMobile = {
+    hidden: { opacity: 0, x: -50 },
+    show: { opacity: 1, x: 0, transition: { duration: 0.8, ease: "easeOut" } },
+  };
+
   return (
     <main className="relative min-h-screen bg-black text-white font-sans mt-28">
       <Navbar />
