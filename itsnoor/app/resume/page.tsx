@@ -26,7 +26,7 @@ const Resume = () => {
           <div className="mb-6">
             <h3 className="text-2xl font-semibold">Dispatcher</h3>
             <p className="text-sm">
-              <a href="https://barbercollins.ca/" className="inline-block bg-white text-black px-2 py-1 rounded-lg hover:shadow-md transition-transform hover:-translate-y-1 mb-1 mr-1">Region of Waterloo</a> • 
+              <a href="https://www.regionofwaterloo.ca/en/index.aspx" className="inline-block bg-white text-black px-2 py-1 rounded-lg hover:shadow-md transition-transform hover:-translate-y-1 mb-1 mr-1">Region of Waterloo</a> • 
               <a href="https://en.wikipedia.org/wiki/Kitchener,_Ontario" className="inline-block bg-white text-black px-2 py-1 rounded-lg hover:shadow-md transition-transform hover:-translate-y-1 mb-1">Waterloo, ON</a> | Aug 2024 - Present
             </p>
             <ul className="list-disc ml-6 mt-2">
@@ -135,7 +135,7 @@ const Resume = () => {
         <div className="mb-8">
           <h2 className="text-3xl font-semibold mb-4">Certifications</h2>
           <ul className="list-none flex flex-wrap gap-4">
-            <li><a href="https://en.wikipedia.org/wiki/Baton_(law_enforcement)" className="inline-block bg-white text-black px-4 py-1 rounded-lg hover:shadow-md transition-transform hover:-translate-y-1 mb-1">ASP Baton and Handcuffing Techniques Certification</a></li>
+            <li><a href="https://www.asp-usa.com/pages/training-programs" className="inline-block bg-white text-black px-4 py-1 rounded-lg hover:shadow-md transition-transform hover:-translate-y-1 mb-1">ASP Baton and Handcuffing Techniques Certification</a></li>
             <li><a href="https://www.condorsecurity.ca/" className="inline-block bg-white text-black px-4 py-1 rounded-lg hover:shadow-md transition-transform hover:-translate-y-1 mb-1">Advanced Security Training at Condor Security (Level 3)</a></li>
             <li><a href="https://en.wikipedia.org/wiki/First_aid" className="inline-block bg-white text-black px-4 py-1 rounded-lg hover:shadow-md transition-transform hover:-translate-y-1 mb-1">First Aid and CPR Certification</a></li>
             <li><a href="https://en.wikipedia.org/wiki/Verbal_Judo" className="inline-block bg-white text-black px-4 py-1 rounded-lg hover:shadow-md transition-transform hover:-translate-y-1 mb-1">Verbal Judo Training for Conflict Resolution</a></li>
