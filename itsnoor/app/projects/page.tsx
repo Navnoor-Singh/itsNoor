@@ -57,15 +57,10 @@ export default function Projects() {
     show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
   };
 
-  const cardVariantsMobile = {
-    hidden: { opacity: 0, x: -50 },
-    show: { opacity: 1, x: 0, transition: { duration: 0.8, ease: "easeOut" } },
-  };
-
   return (
     <main className="relative min-h-screen bg-black text-white font-sans mt-28">
       <Navbar />
-      <section className="flex flex-col md:flex-row md:overflow-x-auto">
+      <section className="flex flex-col md:flex-row">
         <motion.div
           className="md:hidden px-8 py-16 space-y-16"
           variants={containerVariants}
@@ -131,7 +126,7 @@ export default function Projects() {
         </motion.div>
 
         <motion.div
-          className="hidden md:flex space-x-8 px-8"
+          className="hidden md:flex flex-col space-y-8 px-8"
           variants={containerVariants}
           initial="hidden"
           animate="show"
@@ -139,7 +134,7 @@ export default function Projects() {
           {projects.map((project, index) => (
             <motion.div
               key={index}
-              className="card min-w-[85vw] h-[calc(85vh-4rem)] shadow-lg flex flex-col justify-center text-white mx-8 rounded-lg"
+              className="card w-full h-screen bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 shadow-lg p-8 flex flex-col justify-center text-white mx-auto rounded-lg"
               variants={cardVariantsDesktop}
             >
               <div className="card-content">
