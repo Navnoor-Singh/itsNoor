@@ -7,7 +7,7 @@ const Resume = () => {
     <main className="relative min-h-screen text-white font-sans bg-black">
       <Navbar />
 
-      <section className="max-w-4xl mx-auto py-16 px-8 mt-12 bg-opacity-50 bg-black rounded-lg backdrop-blur-lg shadow-lg">
+      <section className="max-w-4xl mx-auto py-16 px-8 mt-0 bg-opacity-50 bg-black rounded-lg backdrop-blur-lg shadow-lg">
         {/* Header Section */}
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold">Navnoor Singh</h1>
@@ -26,8 +26,8 @@ const Resume = () => {
           <div className="mb-6">
             <h3 className="text-2xl font-semibold">Dispatcher</h3>
             <p className="text-sm">
-              <a href="https://barbercollins.ca/" className="inline-block bg-white text-black px-2 py-1 rounded-lg hover:shadow-md transition-transform hover:-translate-y-1 mb-1 mr-1">Barber Collins</a> • 
-              <a href="https://en.wikipedia.org/wiki/Kitchener,_Ontario" className="inline-block bg-white text-black px-2 py-1 rounded-lg hover:shadow-md transition-transform hover:-translate-y-1 mb-1">Kitchener, ON</a> | Aug 2024 - Present
+              <a href="https://barbercollins.ca/" className="inline-block bg-white text-black px-2 py-1 rounded-lg hover:shadow-md transition-transform hover:-translate-y-1 mb-1 mr-1">Region of Waterloo</a> • 
+              <a href="https://en.wikipedia.org/wiki/Kitchener,_Ontario" className="inline-block bg-white text-black px-2 py-1 rounded-lg hover:shadow-md transition-transform hover:-translate-y-1 mb-1">Waterloo, ON</a> | Aug 2024 - Present
             </p>
             <ul className="list-disc ml-6 mt-2">
               <li>Managed and triaged emergency and non-emergency communications, ensuring swift response coordination across multiple channels.</li>
