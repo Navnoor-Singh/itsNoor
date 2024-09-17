@@ -131,7 +131,7 @@ export default function Projects() {
         </motion.div>
 
         <motion.div
-          className="hidden md:flex flex-col space-y-8 px-8"
+          className="hidden md:flex flex-col space-y-8 px-8 overflow-hidden"
           variants={containerVariants}
           initial="hidden"
           animate="show"
