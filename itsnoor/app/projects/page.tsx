@@ -36,9 +36,8 @@ export default function Projects() {
       technologies: "C, Standard I/O, Conditional Logic, Loops",
       role: "C Programmer",
       duration: "24 hours",
-      outcome:"Developed a fully functional game that allows players to configure settings, play multiple rounds, and receive immediate feedback on their progress, enhancing programming skills in C.",
+      outcome: "Developed a fully functional game that allows players to configure settings, play multiple rounds, and receive immediate feedback on their progress, enhancing programming skills in C.",
       githubLink: "https://github.com/Navnoor-Singh/treasureHunt"
-
     },
   ];
 
@@ -63,7 +62,7 @@ export default function Projects() {
   };
 
   return (
-    <main className="relative min-h-screen bg-black text-white font-sans mt-28">
+    <main className="relative min-h-screen bg-black text-white font-sans">
       <Navbar />
       <section className="flex flex-col md:flex-row">
         <motion.div
