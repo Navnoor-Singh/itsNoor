@@ -72,7 +72,10 @@ export default function Contact() {
         <div className="text-center">
           <h2 className="text-4xl font-bold mb-8">Let's Work Together</h2>
           <p className="text-lg mb-8 max-w-[70vw] mx-auto">
-            I'm currently available for freelance projects and open to collaboration. Feel free to reach out to discuss your next big idea.
+            I'm currently available for freelance projects and open to collaboration,
+          </p>
+          <p className="text-lg mb-8 max-w-[70vw] mx-auto">
+            Feel free to reach out to discuss your next big idea.
           </p>
 
           <form className="max-w-md mx-auto" onSubmit={handleSubmit}>
