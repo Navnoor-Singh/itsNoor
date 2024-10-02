@@ -18,82 +18,72 @@ const Resume = () => {
           </p>
         </div>
 
+        {/* Summary Section */}
+        <div className="mb-8">
+          <h2 className="text-3xl font-semibold mb-4">Summary</h2>
+          <p>
+            A highly motivated technical support professional with extensive experience in troubleshooting, hardware installation, and
+            software support across Windows and macOS environments. Proven expertise in building web solutions, maintaining
+            documentation, and providing exceptional customer service. Seeking a role in Technical Support where I can contribute my
+            skills in problem-solving and technical development, with a focus on continuous learning and growth.
+          </p>
+          <p className="mt-4">AVAILABLE PART-TIME | VALID FULL G DRIVER'S LICENSE HOLDER</p>
+        </div>
+
         {/* Experience Section */}
         <div className="mb-8">
           <h2 className="text-3xl font-semibold mb-4">Experience</h2>
 
-          {/* Dispatcher Role - New Section */}
-          <div className="mb-6">
-            <h3 className="text-2xl font-semibold">Dispatcher</h3>
+           {/* Web Developer & Tech Support - New Section */}
+           <div className="mb-6">
+            <h3 className="text-2xl font-semibold">Web Developer & Tech Support</h3>
             <p className="text-sm">
-              <a href="https://www.regionofwaterloo.ca/en/index.aspx" className="inline-block bg-white text-black px-2 py-1 rounded-lg hover:shadow-md transition-transform hover:-translate-y-1 mb-1 mr-1">Region of Waterloo</a> • 
-              <a href="https://en.wikipedia.org/wiki/Kitchener,_Ontario" className="inline-block bg-white text-black px-2 py-1 rounded-lg hover:shadow-md transition-transform hover:-translate-y-1 mb-1">Waterloo, ON</a> | Aug 2024 - Present
+              <a href="https://maximind.ca/" className="inline-block bg-white text-black px-2 py-1 rounded-lg hover:shadow-md transition-transform hover:-translate-y-1 mb-1 mr-1">MaxiMind Learning</a> • 
+              <a href="https://en.wikipedia.org/wiki/Vaughan" className="inline-block bg-white text-black px-2 py-1 rounded-lg hover:shadow-md transition-transform hover:-translate-y-1 mb-1">Vaughan, ON</a> | 09/2024 - Present
             </p>
             <ul className="list-disc ml-6 mt-2">
-              <li>Managed and triaged emergency and non-emergency communications, ensuring swift response coordination across multiple channels.</li>
-              <li>Proficiently operated the P25 Radio system, utilizing the “900 Code,” “10 Code,” and Phonetic Alphabet for efficient communication.</li>
-              <li>Monitored CCTV systems and managed access control, enhancing site security and safety.</li>
-              <li>Conducted operational briefings and issued alerts and BOLOs to front-line guards, maintaining situational awareness and readiness.</li>
-              <li>Handled incident management software and dispatch operations, ensuring accurate record-keeping and incident reporting.</li>
-              <li>Utilized meticulous typing and dictation skills for administrative tasks, consistently maintaining a high level of accuracy and detail.</li>
-              <li>Provided guidance and SOP information to front-line guards, facilitating informed decision-making and operational effectiveness.</li>
+              <li>Manage and maintain the company website, ensuring smooth functionality and user experience for clients and coaches.</li>
+              <li>Provide technical support for various software and hardware issues faced by internal staff and external clients, resolving issues promptly.</li>
+              <li>Implement and monitor SEO strategies to improve the company’s ranking on Google for ADHD-related services, leading to increased online visibility.</li>
+              <li>Troubleshoot and optimize system processes, improving the overall performance of tech infrastructure across the organization.</li>
+              <li>Support coaches by ensuring their technical needs are met, providing guidance on digital tools and system usage.</li>
             </ul>
           </div>
 
-          {/* Existing Experience Sections */}
+          {/* Freelance Web Developer & Technical Consultant */}
           <div className="mb-6">
-            <h3 className="text-2xl font-semibold">Front Desk Concierge</h3>
-            <p className="text-sm">
-              <a href="https://elitecondoconcierge.com/" className="inline-block bg-white text-black px-2 py-1 rounded-lg hover:shadow-md transition-transform hover:-translate-y-1 mb-1 mr-1">Elite Residential Security</a> • 
-              <a href="https://en.wikipedia.org/wiki/Toronto" className="inline-block bg-white text-black px-2 py-1 rounded-lg hover:shadow-md transition-transform hover:-translate-y-1 mb-1">Toronto, ON</a> | 02/2024 - 04/2024
-            </p>
+            <h3 className="text-2xl font-semibold">Freelance Web Developer & Technical Consultant</h3>
+            <p className="text-sm">Self-Employed • Remote | 08/2021 - Present</p>
             <ul className="list-disc ml-6 mt-2">
-              <li>Managed security operations for a 400-unit residential complex, ensuring a safe and welcoming environment.</li>
-              <li>Spearheaded emergency response strategies, reducing incident resolution time by 30%.</li>
-              <li>Conducted daily security checks, resulting in a 20% decrease in security breaches.</li>
-              <li>Trained and supervised a team of 5 new security personnel, improving overall efficiency by 15%.</li>
+              <li>Developed custom websites using HTML, CSS, and JavaScript for small businesses and personal clients.</li>
+              <li>Installed and configured hardware, including surveillance cameras and PC components, across multiple locations.</li>
+              <li>Provided technical consultancy to clients, ensuring optimal system setup and maintenance.</li>
+              <li>Built online platforms, including e-commerce solutions, while offering ongoing support and troubleshooting.</li>
+              <li>Specialized in creating web pages and integrating third-party APIs, such as YouTube API, to enhance functionality.</li>
             </ul>
           </div>
 
+          {/* Technical Operations Supervisor */}
           <div className="mb-6">
-            <h3 className="text-2xl font-semibold">Mobile Patrol Supervisor</h3>
-            <p className="text-sm">
-              <a href="https://www.instagram.com/condor_security/?hl=en" className="inline-block bg-white text-black px-2 py-1 rounded-lg hover:shadow-md transition-transform hover:-translate-y-1 mb-1 mr-1">Condor Security</a> • 
-              <a href="https://en.wikipedia.org/wiki/Toronto" className="inline-block bg-white text-black px-2 py-1 rounded-lg hover:shadow-md transition-transform hover:-translate-y-1 mb-1">Toronto, ON</a> | 08/2023 - 02/2024
-            </p>
+            <h3 className="text-2xl font-semibold">Technical Operations Supervisor</h3>
+            <p className="text-sm">Condor Security • Toronto, ON | 08/2023 - 02/2024</p>
             <ul className="list-disc ml-6 mt-2">
-              <li>Orchestrated comprehensive security operations, including scheduling emergency responses for the entire company of over 1,000 employees, dispatch coordination, and rapid response execution.</li>
-              <li>Enhanced team performance by 25% through careful planning and effective resource allocation.</li>
-              <li>Conducted over 20 spot checks and audits daily, ensuring 100% adherence to security protocols.</li>
-              <li>Enforced a new patrol system, increasing coverage efficiency by 30%.</li>
-              <li>Developed and delivered training programs for 50 team members, resulting in a 40% improvement in response times.</li>
-              <li>Applied knowledge of the Trespass to Property Act, Criminal Code of Canada, Ontario Use of Force model, and Powers of Arrest in daily operations.</li>
-              <li>Managed rotating shifts, including days, evenings, overnights, weekends, and statutory holidays.</li>
+              <li>Installed and maintained surveillance camera systems and other hardware for various sites.</li>
+              <li>Developed and implemented web-based solutions for improving internal operations and communication.</li>
+              <li>Conducted technical audits and optimized system processes, resulting in improved efficiency and coverage.</li>
+              <li>Provided technical support for team members, handling hardware troubleshooting and maintenance.</li>
+              <li>Enhanced system protocols using tech tools, improving the performance of security operations.</li>
             </ul>
           </div>
 
+          {/* Coordinator & Technical Specialist */}
           <div className="mb-6">
-            <h3 className="text-2xl font-semibold">Concierge/Front Desk</h3>
-            <p className="text-sm">
-              <a href="https://www.instagram.com/condor_security/?hl=en" className="inline-block bg-white text-black px-2 py-1 rounded-lg hover:shadow-md transition-transform hover:-translate-y-1 mb-1 mr-1">Condor Security</a> • 
-              <a href="https://en.wikipedia.org/wiki/Toronto" className="inline-block bg-white text-black px-2 py-1 rounded-lg hover:shadow-md transition-transform hover:-translate-y-1 mb-1">Toronto, ON</a> | 05/2023 - 08/2023
-            </p>
+            <h3 className="text-2xl font-semibold">Coordinator & Technical Specialist</h3>
+            <p className="text-sm">RigelSky Institute of Education • Patti, PB | 08/2021 - 08/2022</p>
             <ul className="list-disc ml-6 mt-2">
-              <li>Delivered top-tier customer service to over 900 residents while ensuring stringent security measures.</li>
-              <li>Recognized for exceptional performance, leading to a promotion to a supervisory role within 3 months.</li>
-              <li>Managed visitor logs and access control, maintaining 100% accuracy in records.</li>
-              <li>Resolved resident issues and concerns swiftly, achieving a 95% satisfaction rate.</li>
-            </ul>
-          </div>
-
-          <div className="mb-6">
-            <h3 className="text-2xl font-semibold">Coordinator</h3>
-            <p className="text-sm">RigelSky Institute of Education • <a href="https://en.wikipedia.org/wiki/Patti,_Punjab" className="inline-block bg-white text-black px-2 py-1 rounded-lg hover:shadow-md transition-transform hover:-translate-y-1 mb-1">Patti, PB</a> | 08/2021 - 08/2022</p>
-            <ul className="list-disc ml-6 mt-2">
-              <li>Coordinated program activities and events for over 100 international students.</li>
-              <li>Developed and implemented lesson plans, resulting in a 20% improvement in student performance.</li>
-              <li>Organized and led 10+ educational workshops, enhancing student engagement by 25%.</li>
-              <li>Provided one-on-one support to students, contributing to a 15% increase in overall retention rates.</li>
+              <li>Installed and maintained technical infrastructure for educational workshops and program activities.</li>
+              <li>Managed the institute’s website and provided technical support for staff and students.</li>
+              <li>Assisted in troubleshooting hardware and software issues, improving operational efficiency.</li>
             </ul>
           </div>
         </div>
@@ -102,19 +92,19 @@ const Resume = () => {
         <div className="mb-8">
           <h2 className="text-3xl font-semibold mb-4">Skills</h2>
           <ul className="list-disc ml-6">
-            <li>Expert in surveillance and observation techniques</li>
-            <li>Advanced communication skills</li>
-            <li>Proficient in emergency response and first aid</li>
-            <li>Skilled in incident reporting and documentation</li>
-            <li>Expertise in crisis management and rapid response</li>
-            <li>Proven leadership and team coordination abilities</li>
-            <li>Strong conflict resolution and de-escalation skills</li>
-            <li>In-depth knowledge of security systems and technology</li>
-            <li>Knowledge of Trespass to Property Act, Criminal Code of Canada, Region of Waterloo Code of Use By-Law 13-050, Ontario Use of Force model, and Powers of Arrest</li>
+            <li>Troubleshooting (Windows & macOS)</li>
+            <li>PC Hardware Troubleshooting</li>
+            <li>Web Development (MERN Stack)</li>
+            <li>SQL & Log Analysis</li>
+            <li>Documentation & Case Management (QuickBase)</li>
+            <li>Effective Communication (Email, Phone, In-Person)</li>
+            <li>Windows & Linux Shell CLI</li>
+            <li>Camera Installation & Maintenance</li>
+            <li>Website Development & Administration</li>
           </ul>
         </div>
 
-        {/* Languages as Islands */}
+        {/* Languages Section */}
         <div className="mb-8">
           <h2 className="text-3xl font-semibold mb-4">Languages</h2>
           <ul className="list-none flex flex-wrap gap-4">
@@ -125,20 +115,20 @@ const Resume = () => {
           </ul>
         </div>
 
-        {/* Education as Island */}
+        {/* Education Section */}
         <div className="mb-8">
           <h2 className="text-3xl font-semibold mb-4">Education</h2>
           <p><a href="https://www.senecacollege.ca/" className="inline-block bg-white text-black px-4 py-1 rounded-lg hover:shadow-md transition-transform hover:-translate-y-1 mb-1">Computer Programming • Seneca College • Toronto</a></p>
         </div>
 
-        {/* Certifications as Islands */}
+        {/* Certifications Section */}
         <div className="mb-8">
           <h2 className="text-3xl font-semibold mb-4">Certifications</h2>
           <ul className="list-none flex flex-wrap gap-4">
-            <li><a href="https://www.asp-usa.com/pages/training-programs" className="inline-block bg-white text-black px-4 py-1 rounded-lg hover:shadow-md transition-transform hover:-translate-y-1 mb-1">ASP Baton and Handcuffing Techniques Certification</a></li>
-            <li><a href="https://www.condorsecurity.ca/" className="inline-block bg-white text-black px-4 py-1 rounded-lg hover:shadow-md transition-transform hover:-translate-y-1 mb-1">Advanced Security Training at Condor Security (Level 3)</a></li>
             <li><a href="https://en.wikipedia.org/wiki/First_aid" className="inline-block bg-white text-black px-4 py-1 rounded-lg hover:shadow-md transition-transform hover:-translate-y-1 mb-1">First Aid and CPR Certification</a></li>
             <li><a href="https://en.wikipedia.org/wiki/Verbal_Judo" className="inline-block bg-white text-black px-4 py-1 rounded-lg hover:shadow-md transition-transform hover:-translate-y-1 mb-1">Verbal Judo Training for Conflict Resolution</a></li>
+            <li><a href="https://www.asp-usa.com/pages/training-programs" className="inline-block bg-white text-black px-4 py-1 rounded-lg hover:shadow-md transition-transform hover:-translate-y-1 mb-1">ASP Baton and Handcuffing Techniques Certification</a></li>
+            <li><a href="https://www.condorsecurity.ca/" className="inline-block bg-white text-black px-4 py-1 rounded-lg hover:shadow-md transition-transform hover:-translate-y-1 mb-1">Advanced Security Training at Condor Security (Level 3)</a></li>
           </ul>
         </div>
       </section>
